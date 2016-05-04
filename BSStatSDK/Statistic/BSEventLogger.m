@@ -94,7 +94,7 @@ static const NSTimeInterval kDefaultTimeInterval = 1 * 60 * 60;
          handleException:(NSException *)exception{
     NSParameterAssert(exception && exception.userInfo);
     
-    NSArray *errorInfoArray = [exception.userInfo objectForKey:kUncaughtExceptionInfoKey];
+    NSArray *errorInfoArray = [exception.userInfo objectForKey:kBSUncaughtExceptionInfoKey];
     NSMutableString *errorInfo = [exception.name mutableCopy];
     [errorInfo appendString:exception.reason];
     [errorInfo appendString:[errorInfoArray componentsJoinedByString:@""]];

@@ -10,52 +10,52 @@
 #include <libkern/OSAtomic.h>
 #include <execinfo.h>
 
-NSString *const kUncaughtExceptionInfoKey = @"UncaughtExceptionInfoKey";
+NSString *const kBSUncaughtExceptionInfoKey = @"UncaughtExceptionInfoKey";
 
-static NSString *const kUncaughtExceptionSignalException = @"UncaughtExceptionSignalException";
-static NSString *const kUncaughtExceptionSignalKey = @"UncaughtExceptionSignalKey";
+static NSString *const kBSUncaughtExceptionSignalException = @"UncaughtExceptionSignalException";
+static NSString *const kBSUncaughtExceptionSignalKey = @"UncaughtExceptionSignalKey";
 
-static volatile int32_t kUncaughtExceptionCount = 0;
-static const int32_t kUncaughtExceptionMaximum = 10;
+static volatile int32_t kBSUncaughtExceptionCount = 0;
+static const int32_t kBSUncaughtExceptionMaximum = 10;
 
-static const NSInteger kUncaughtExceptionSkipAddressCount = 1;
-static const NSInteger kUncaughtExceptionReportAddressCount = 5;
+static const NSInteger kBSUncaughtExceptionSkipAddressCount = 1;
+static const NSInteger kBSUncaughtExceptionReportAddressCount = 5;
 
 #pragma mark - Global Exception Function
 
-void performSelectorWithException(NSException *exception);
+void BSPerformSelectorWithException(NSException *exception);
 
-void HandleException(NSException *exception){
-    int32_t exceptionCount = OSAtomicIncrement32(&kUncaughtExceptionCount);
-    if (exceptionCount > kUncaughtExceptionMaximum){
+void BSHandleException(NSException *exception){
+    int32_t exceptionCount = OSAtomicIncrement32(&kBSUncaughtExceptionCount);
+    if (exceptionCount > kBSUncaughtExceptionMaximum){
         return;
     }
     
     NSArray *fullCallStack = [exception callStackSymbols];
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
-    [userInfo setObject:fullCallStack forKey:kUncaughtExceptionInfoKey];
+    [userInfo setObject:fullCallStack forKey:kBSUncaughtExceptionInfoKey];
     
     NSException *newException = [NSException exceptionWithName:[exception name]
                                                        reason:[exception reason]
                                                      userInfo:userInfo];
-    performSelectorWithException(newException);
+    BSPerformSelectorWithException(newException);
 }
 
-void SignalHandler(int signal){
-    int32_t exceptionCount = OSAtomicIncrement32(&kUncaughtExceptionCount);
-    if (exceptionCount > kUncaughtExceptionMaximum){
+void BSSignalHandler(int signal){
+    int32_t exceptionCount = OSAtomicIncrement32(&kBSUncaughtExceptionCount);
+    if (exceptionCount > kBSUncaughtExceptionMaximum){
         return;
     }
     
     NSMutableDictionary *userInfo =[NSMutableDictionary dictionaryWithObject:[NSNumber numberWithInt:signal]
-                                                                      forKey:kUncaughtExceptionSignalKey];
+                                                                      forKey:kBSUncaughtExceptionSignalKey];
     NSArray *callStack = [BSUncaughtExceptionHandler backtraceArray];
-    [userInfo setObject:callStack forKey:kUncaughtExceptionInfoKey];
+    [userInfo setObject:callStack forKey:kBSUncaughtExceptionInfoKey];
     
-    NSException *newException = [NSException exceptionWithName:kUncaughtExceptionSignalException
+    NSException *newException = [NSException exceptionWithName:kBSUncaughtExceptionSignalException
                                                         reason:@"Signal was raised"
                                                       userInfo:userInfo];
-    performSelectorWithException(newException);
+    BSPerformSelectorWithException(newException);
 }
 
 #pragma mark - UncaughtExceptionHandler
@@ -74,13 +74,13 @@ void SignalHandler(int signal){
 - (id)init{
     self = [super init];
     if (self){
-        NSSetUncaughtExceptionHandler(&HandleException);
-        signal(SIGABRT, SignalHandler);
-        signal(SIGILL, SignalHandler);
-        signal(SIGSEGV, SignalHandler);
-        signal(SIGFPE, SignalHandler);
-        signal(SIGBUS, SignalHandler);
-        signal(SIGPIPE, SignalHandler);
+        NSSetUncaughtExceptionHandler(&BSHandleException);
+        signal(SIGABRT, BSSignalHandler);
+        signal(SIGILL, BSSignalHandler);
+        signal(SIGSEGV, BSSignalHandler);
+        signal(SIGFPE, BSSignalHandler);
+        signal(SIGBUS, BSSignalHandler);
+        signal(SIGPIPE, BSSignalHandler);
         return self;
     }
     return nil;
@@ -103,9 +103,9 @@ void SignalHandler(int signal){
 	 
 	 NSMutableArray *backtrace = [NSMutableArray array];
 	 for (
-	 	NSInteger i = kUncaughtExceptionSkipAddressCount;
-	 	i < kUncaughtExceptionSkipAddressCount +
-			kUncaughtExceptionReportAddressCount;
+	 	NSInteger i = kBSUncaughtExceptionSkipAddressCount;
+	 	i < kBSUncaughtExceptionSkipAddressCount +
+			kBSUncaughtExceptionReportAddressCount;
 		i++)
      {
 	 	[backtrace addObject:[NSString stringWithUTF8String:strs[i]]];
@@ -115,12 +115,12 @@ void SignalHandler(int signal){
 	 return [backtrace copy];
 }
 
-- (void)handleException:(NSException *)exception{
+- (void)BSHandleException:(NSException *)exception{
     if (self.delegate)
         [self.delegate exceptionHandler:self handleException:exception];
     
-	if ([[exception name] isEqual:kUncaughtExceptionSignalException]){
-		kill(getpid(), [[[exception userInfo] objectForKey:kUncaughtExceptionSignalKey] intValue]);
+	if ([[exception name] isEqual:kBSUncaughtExceptionSignalException]){
+		kill(getpid(), [[[exception userInfo] objectForKey:kBSUncaughtExceptionSignalKey] intValue]);
 	}else{
 		[exception raise];
 	}
@@ -128,12 +128,12 @@ void SignalHandler(int signal){
 
 @end
 
-void performSelectorWithException(NSException *exception){
+void BSPerformSelectorWithException(NSException *exception){
     if (!exception)
         return;
     
     BSUncaughtExceptionHandler *exceptionHandler = [BSUncaughtExceptionHandler sharedUncaughtExceptionHandler];
-    [exceptionHandler performSelectorOnMainThread:@selector(handleException:)
+    [exceptionHandler performSelectorOnMainThread:@selector(BSHandleException:)
                                        withObject:exception
                                     waitUntilDone:YES];
 }

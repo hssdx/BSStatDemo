@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const kUncaughtExceptionInfoKey;
+extern NSString *const kBSUncaughtExceptionInfoKey;
 
 @class BSUncaughtExceptionHandler;
 
