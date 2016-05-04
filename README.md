@@ -2,7 +2,7 @@
 利用 AOP 编程思想编写的一个埋点收集工具
 
 
-'
+
     /**
      *  对于按钮, 当调用过 addTarget:action:forControlEvents: 方法后将记录此按钮的 touch 事件
      *  事件的名称是 eventKey
@@ -21,4 +21,5 @@
      */
     [self.testSwitch setValue:@YES forKey:@"needTelemetry"];
     
-    '
+    
+    
