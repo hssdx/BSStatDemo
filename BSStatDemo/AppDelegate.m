@@ -7,16 +7,37 @@
 //
 
 #import "AppDelegate.h"
+#import "BSStatSDK.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <BSEventLoggerDelegate>
 
 @end
 
 @implementation AppDelegate
+- (void)eventLogger:(BSEventLogger *)logger didRecordEvent:(BSEventLoggerType)type withEventType:(NSString *)eventType {
+    static NSDictionary *typeToString;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        typeToString = @{@(BSEventLoggerTypeTouch):@"touch",
+                         @(BSEventLoggerTypeAppear):@"view appear",
+                         @(BSEventLoggerTypeDisappear):@"view disappear"};
+    });
+    NSLog(@"<%@, %@>", typeToString[@(type)], eventType);
+}
 
+- (void)sendCachedDataWithEventLogger:(BSEventLogger *)logger {
+    NSLog(@"<%@>", logger);
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /**
+     *  回调代理
+     */
+    [BSStatSDK setLoggerDelegate:self];
+    /**
+     *  开始记录
+     */
+    [BSStatSDK startUpRecord];
     return YES;
 }
 

@@ -13,6 +13,25 @@
 		98F3066D1CD8F19B005BB9CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F3066B1CD8F19B005BB9CE /* Main.storyboard */; };
 		98F3066F1CD8F19B005BB9CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F3066E1CD8F19B005BB9CE /* Assets.xcassets */; };
 		98F306721CD8F19B005BB9CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F306701CD8F19B005BB9CE /* LaunchScreen.storyboard */; };
+		98F306A81CD8F716005BB9CE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F306A71CD8F716005BB9CE /* libz.tbd */; };
+		98F306B11CD90D54005BB9CE /* InterceptControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F306B01CD90D54005BB9CE /* InterceptControlViewController.m */; };
+		98F306BA1CD9ED01005BB9CE /* InterceptGestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F306B91CD9ED01005BB9CE /* InterceptGestureViewController.m */; };
+		98F3CA131CD9F7A400157ED6 /* BSStatSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9F11CD9F7A400157ED6 /* BSStatSDK.m */; };
+		98F3CA141CD9F7A400157ED6 /* BSMeterCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9F41CD9F7A400157ED6 /* BSMeterCache.m */; };
+		98F3CA151CD9F7A400157ED6 /* BSStatisticCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9F61CD9F7A400157ED6 /* BSStatisticCacheManager.m */; };
+		98F3CA161CD9F7A400157ED6 /* NSString+BSURLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9F81CD9F7A400157ED6 /* NSString+BSURLUtil.m */; };
+		98F3CA171CD9F7A400157ED6 /* BSEventLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9FB1CD9F7A400157ED6 /* BSEventLogger.m */; };
+		98F3CA181CD9F7A400157ED6 /* BSNetworkingInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9FD1CD9F7A400157ED6 /* BSNetworkingInfo.m */; };
+		98F3CA191CD9F7A400157ED6 /* BSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3C9FF1CD9F7A400157ED6 /* BSReachability.m */; };
+		98F3CA1A1CD9F7A400157ED6 /* BSStatisticBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA011CD9F7A400157ED6 /* BSStatisticBaseModel.m */; };
+		98F3CA1B1CD9F7A400157ED6 /* BSStatisticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA031CD9F7A400157ED6 /* BSStatisticModel.m */; };
+		98F3CA1C1CD9F7A400157ED6 /* BSUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA051CD9F7A400157ED6 /* BSUncaughtExceptionHandler.m */; };
+		98F3CA1D1CD9F7A400157ED6 /* NSDate+BSTimeInterval.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA081CD9F7A400157ED6 /* NSDate+BSTimeInterval.m */; };
+		98F3CA1E1CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA0A1CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.m */; };
+		98F3CA1F1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA0C1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.m */; };
+		98F3CA201CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA0E1CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.m */; };
+		98F3CA211CD9F7A400157ED6 /* UIView+BSEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA101CD9F7A400157ED6 /* UIView+BSEventInterceptor.m */; };
+		98F3CA221CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F3CA121CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +45,44 @@
 		98F3066E1CD8F19B005BB9CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98F306711CD8F19B005BB9CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98F306731CD8F19B005BB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98F306A71CD8F716005BB9CE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		98F306AF1CD90D54005BB9CE /* InterceptControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptControlViewController.h; sourceTree = "<group>"; };
+		98F306B01CD90D54005BB9CE /* InterceptControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptControlViewController.m; sourceTree = "<group>"; };
+		98F306B81CD9ED01005BB9CE /* InterceptGestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterceptGestureViewController.h; sourceTree = "<group>"; };
+		98F306B91CD9ED01005BB9CE /* InterceptGestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterceptGestureViewController.m; sourceTree = "<group>"; };
+		98F3C9F01CD9F7A400157ED6 /* BSStatSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSStatSDK.h; sourceTree = "<group>"; };
+		98F3C9F11CD9F7A400157ED6 /* BSStatSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSStatSDK.m; sourceTree = "<group>"; };
+		98F3C9F31CD9F7A400157ED6 /* BSMeterCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSMeterCache.h; sourceTree = "<group>"; };
+		98F3C9F41CD9F7A400157ED6 /* BSMeterCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSMeterCache.m; sourceTree = "<group>"; };
+		98F3C9F51CD9F7A400157ED6 /* BSStatisticCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSStatisticCacheManager.h; sourceTree = "<group>"; };
+		98F3C9F61CD9F7A400157ED6 /* BSStatisticCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSStatisticCacheManager.m; sourceTree = "<group>"; };
+		98F3C9F71CD9F7A400157ED6 /* NSString+BSURLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSURLUtil.h"; sourceTree = "<group>"; };
+		98F3C9F81CD9F7A400157ED6 /* NSString+BSURLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSURLUtil.m"; sourceTree = "<group>"; };
+		98F3C9FA1CD9F7A400157ED6 /* BSEventLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSEventLogger.h; sourceTree = "<group>"; };
+		98F3C9FB1CD9F7A400157ED6 /* BSEventLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSEventLogger.m; sourceTree = "<group>"; };
+		98F3C9FC1CD9F7A400157ED6 /* BSNetworkingInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSNetworkingInfo.h; sourceTree = "<group>"; };
+		98F3C9FD1CD9F7A400157ED6 /* BSNetworkingInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSNetworkingInfo.m; sourceTree = "<group>"; };
+		98F3C9FE1CD9F7A400157ED6 /* BSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSReachability.h; sourceTree = "<group>"; };
+		98F3C9FF1CD9F7A400157ED6 /* BSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSReachability.m; sourceTree = "<group>"; };
+		98F3CA001CD9F7A400157ED6 /* BSStatisticBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSStatisticBaseModel.h; sourceTree = "<group>"; };
+		98F3CA011CD9F7A400157ED6 /* BSStatisticBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSStatisticBaseModel.m; sourceTree = "<group>"; };
+		98F3CA021CD9F7A400157ED6 /* BSStatisticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSStatisticModel.h; sourceTree = "<group>"; };
+		98F3CA031CD9F7A400157ED6 /* BSStatisticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSStatisticModel.m; sourceTree = "<group>"; };
+		98F3CA041CD9F7A400157ED6 /* BSUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		98F3CA051CD9F7A400157ED6 /* BSUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSUncaughtExceptionHandler.m; sourceTree = "<group>"; };
+		98F3CA061CD9F7A400157ED6 /* BSUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSUtilities.h; sourceTree = "<group>"; };
+		98F3CA071CD9F7A400157ED6 /* NSDate+BSTimeInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSTimeInterval.h"; sourceTree = "<group>"; };
+		98F3CA081CD9F7A400157ED6 /* NSDate+BSTimeInterval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSTimeInterval.m"; sourceTree = "<group>"; };
+		98F3CA091CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+BSEventInterceptor.h"; sourceTree = "<group>"; };
+		98F3CA0A1CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+BSEventInterceptor.m"; sourceTree = "<group>"; };
+		98F3CA0B1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BSEventInterceptor.h"; sourceTree = "<group>"; };
+		98F3CA0C1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BSEventInterceptor.m"; sourceTree = "<group>"; };
+		98F3CA0D1CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+BSEventInterceptor.h"; sourceTree = "<group>"; };
+		98F3CA0E1CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+BSEventInterceptor.m"; sourceTree = "<group>"; };
+		98F3CA0F1CD9F7A400157ED6 /* UIView+BSEventInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSEventInterceptor.h"; sourceTree = "<group>"; };
+		98F3CA101CD9F7A400157ED6 /* UIView+BSEventInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSEventInterceptor.m"; sourceTree = "<group>"; };
+		98F3CA111CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BSEventInterceptor.h"; sourceTree = "<group>"; };
+		98F3CA121CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BSEventInterceptor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F306A81CD8F716005BB9CE /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +100,8 @@
 		98F306561CD8F19B005BB9CE = {
 			isa = PBXGroup;
 			children = (
+				98F306A71CD8F716005BB9CE /* libz.tbd */,
+				98F3C9EF1CD9F7A400157ED6 /* BSStatSDK */,
 				98F306611CD8F19B005BB9CE /* BSStatDemo */,
 				98F306601CD8F19B005BB9CE /* Products */,
 			);
@@ -60,13 +120,14 @@
 			children = (
 				98F306651CD8F19B005BB9CE /* AppDelegate.h */,
 				98F306661CD8F19B005BB9CE /* AppDelegate.m */,
+				98F306AF1CD90D54005BB9CE /* InterceptControlViewController.h */,
+				98F306B01CD90D54005BB9CE /* InterceptControlViewController.m */,
+				98F306B81CD9ED01005BB9CE /* InterceptGestureViewController.h */,
+				98F306B91CD9ED01005BB9CE /* InterceptGestureViewController.m */,
+				98F3066B1CD8F19B005BB9CE /* Main.storyboard */,
+				98F306B61CD9ECAA005BB9CE /* OtherFiles */,
 				98F306681CD8F19B005BB9CE /* ViewController.h */,
 				98F306691CD8F19B005BB9CE /* ViewController.m */,
-				98F3066B1CD8F19B005BB9CE /* Main.storyboard */,
-				98F3066E1CD8F19B005BB9CE /* Assets.xcassets */,
-				98F306701CD8F19B005BB9CE /* LaunchScreen.storyboard */,
-				98F306731CD8F19B005BB9CE /* Info.plist */,
-				98F306621CD8F19B005BB9CE /* Supporting Files */,
 			);
 			path = BSStatDemo;
 			sourceTree = "<group>";
@@ -77,6 +138,73 @@
 				98F306631CD8F19B005BB9CE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		98F306B61CD9ECAA005BB9CE /* OtherFiles */ = {
+			isa = PBXGroup;
+			children = (
+				98F3066E1CD8F19B005BB9CE /* Assets.xcassets */,
+				98F306701CD8F19B005BB9CE /* LaunchScreen.storyboard */,
+				98F306731CD8F19B005BB9CE /* Info.plist */,
+				98F306621CD8F19B005BB9CE /* Supporting Files */,
+			);
+			name = OtherFiles;
+			sourceTree = "<group>";
+		};
+		98F3C9EF1CD9F7A400157ED6 /* BSStatSDK */ = {
+			isa = PBXGroup;
+			children = (
+				98F3C9F01CD9F7A400157ED6 /* BSStatSDK.h */,
+				98F3C9F11CD9F7A400157ED6 /* BSStatSDK.m */,
+				98F3C9F21CD9F7A400157ED6 /* Cache */,
+				98F3C9F91CD9F7A400157ED6 /* Statistic */,
+			);
+			path = BSStatSDK;
+			sourceTree = "<group>";
+		};
+		98F3C9F21CD9F7A400157ED6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				98F3C9F31CD9F7A400157ED6 /* BSMeterCache.h */,
+				98F3C9F41CD9F7A400157ED6 /* BSMeterCache.m */,
+				98F3C9F51CD9F7A400157ED6 /* BSStatisticCacheManager.h */,
+				98F3C9F61CD9F7A400157ED6 /* BSStatisticCacheManager.m */,
+				98F3C9F71CD9F7A400157ED6 /* NSString+BSURLUtil.h */,
+				98F3C9F81CD9F7A400157ED6 /* NSString+BSURLUtil.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		98F3C9F91CD9F7A400157ED6 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				98F3C9FA1CD9F7A400157ED6 /* BSEventLogger.h */,
+				98F3C9FB1CD9F7A400157ED6 /* BSEventLogger.m */,
+				98F3C9FC1CD9F7A400157ED6 /* BSNetworkingInfo.h */,
+				98F3C9FD1CD9F7A400157ED6 /* BSNetworkingInfo.m */,
+				98F3C9FE1CD9F7A400157ED6 /* BSReachability.h */,
+				98F3C9FF1CD9F7A400157ED6 /* BSReachability.m */,
+				98F3CA001CD9F7A400157ED6 /* BSStatisticBaseModel.h */,
+				98F3CA011CD9F7A400157ED6 /* BSStatisticBaseModel.m */,
+				98F3CA021CD9F7A400157ED6 /* BSStatisticModel.h */,
+				98F3CA031CD9F7A400157ED6 /* BSStatisticModel.m */,
+				98F3CA041CD9F7A400157ED6 /* BSUncaughtExceptionHandler.h */,
+				98F3CA051CD9F7A400157ED6 /* BSUncaughtExceptionHandler.m */,
+				98F3CA061CD9F7A400157ED6 /* BSUtilities.h */,
+				98F3CA071CD9F7A400157ED6 /* NSDate+BSTimeInterval.h */,
+				98F3CA081CD9F7A400157ED6 /* NSDate+BSTimeInterval.m */,
+				98F3CA091CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.h */,
+				98F3CA0A1CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.m */,
+				98F3CA0B1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.h */,
+				98F3CA0C1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.m */,
+				98F3CA0D1CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.h */,
+				98F3CA0E1CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.m */,
+				98F3CA0F1CD9F7A400157ED6 /* UIView+BSEventInterceptor.h */,
+				98F3CA101CD9F7A400157ED6 /* UIView+BSEventInterceptor.m */,
+				98F3CA111CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.h */,
+				98F3CA121CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.m */,
+			);
+			path = Statistic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +277,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98F3CA151CD9F7A400157ED6 /* BSStatisticCacheManager.m in Sources */,
+				98F3CA1C1CD9F7A400157ED6 /* BSUncaughtExceptionHandler.m in Sources */,
+				98F3CA1B1CD9F7A400157ED6 /* BSStatisticModel.m in Sources */,
+				98F3CA191CD9F7A400157ED6 /* BSReachability.m in Sources */,
+				98F3CA141CD9F7A400157ED6 /* BSMeterCache.m in Sources */,
+				98F3CA1D1CD9F7A400157ED6 /* NSDate+BSTimeInterval.m in Sources */,
+				98F3CA1A1CD9F7A400157ED6 /* BSStatisticBaseModel.m in Sources */,
+				98F306BA1CD9ED01005BB9CE /* InterceptGestureViewController.m in Sources */,
+				98F3CA181CD9F7A400157ED6 /* BSNetworkingInfo.m in Sources */,
+				98F3CA1E1CD9F7A400157ED6 /* UIApplication+BSEventInterceptor.m in Sources */,
+				98F3CA131CD9F7A400157ED6 /* BSStatSDK.m in Sources */,
 				98F3066A1CD8F19B005BB9CE /* ViewController.m in Sources */,
+				98F3CA161CD9F7A400157ED6 /* NSString+BSURLUtil.m in Sources */,
+				98F3CA201CD9F7A400157ED6 /* UIResponder+BSEventInterceptor.m in Sources */,
+				98F3CA1F1CD9F7A400157ED6 /* UIControl+BSEventInterceptor.m in Sources */,
 				98F306671CD8F19B005BB9CE /* AppDelegate.m in Sources */,
+				98F3CA211CD9F7A400157ED6 /* UIView+BSEventInterceptor.m in Sources */,
 				98F306641CD8F19B005BB9CE /* main.m in Sources */,
+				98F306B11CD90D54005BB9CE /* InterceptControlViewController.m in Sources */,
+				98F3CA221CD9F7A400157ED6 /* UIViewController+BSEventInterceptor.m in Sources */,
+				98F3CA171CD9F7A400157ED6 /* BSEventLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BSStatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeachSon.com.BSStatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BSStatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeachSon.com.BSStatDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +450,7 @@
 				98F306781CD8F19B005BB9CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
